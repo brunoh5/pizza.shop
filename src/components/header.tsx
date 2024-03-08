@@ -1,6 +1,8 @@
 import { Home, Pizza, UtensilsCrossed } from 'lucide-react'
-import { Link } from 'react-router-dom'
 
+import { AccountMenu } from './account-menu'
+import { NavLink } from './nav-link'
+import { ThemeToggle } from './theme/theme-toggle'
 import { Separator } from './ui/separator'
 
 export function Header() {
@@ -12,16 +14,21 @@ export function Header() {
         <Separator orientation="vertical" className="h-6" />
 
         <nav className="flex items-center space-x-4 lg:space-x-6">
-          <Link to="/">
+          <NavLink to="/">
             <Home className="size-4" />
             Inicio
-          </Link>
+          </NavLink>
 
-          <Link to="/orders">
+          <NavLink to="/orders">
             <UtensilsCrossed className="size-4" />
             Pedidos
-          </Link>
+          </NavLink>
         </nav>
+
+        <div className="ml-auto flex items-center gap-2">
+          <ThemeToggle />
+          <AccountMenu />
+        </div>
       </div>
     </div>
   )
