@@ -29,6 +29,6 @@
       ]
     }
   },
-  "include": ["src", "test"],
+  "include": ["src", "test", "src/api/mocks/mocks"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
